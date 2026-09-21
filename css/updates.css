@@ -997,14 +997,105 @@
 
 /* ==================== AUTHENTIC HUMAN HERO BANNER ==================== */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+/* ==================== COMPACT & PROFESSIONAL HEADER ==================== */
+.top-brand-header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(16, 56, 40, 0.08);
+}
 
-/* Top Super Green Bar */
+.brand-header-inner {
+  max-width: 1320px;
+  margin-inline: auto;
+  padding: 0.42rem clamp(1rem, 2.5vw, 2rem) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem !important;
+}
+
+.brand-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem !important;
+}
+
+/* 1. Normal, Professional Logo Sizing */
+.main-circle-logo {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  object-fit: contain !important;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 5px rgba(16, 56, 40, 0.1));
+  transition: transform 0.2s ease;
+}
+.brand-logo-link:hover .main-circle-logo {
+  transform: scale(1.03);
+}
+
+/* 2. Compact Foundation Name Properly Aligned with Logo */
+.brand-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-titles .en-name {
+  display: none !important; /* Hide duplicate all-caps line to keep header slim and elegant */
+}
+
+.brand-titles .gu-name {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: clamp(1.18rem, 1.6vw, 1.35rem) !important;
+  font-weight: 800 !important;
+  color: #0b3823 !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.15 !important;
+  margin: 0 !important;
+}
+
+.brand-titles .brand-tagline {
+  font-size: 0.76rem !important;
+  font-weight: 500 !important;
+  color: #53695d !important;
+  line-height: 1.2 !important;
+  margin-top: 2px !important;
+  letter-spacing: 0.01em;
+}
+
+/* Compact Motto Badge */
+.brand-motto-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem !important;
+  padding-left: 1rem !important;
+}
+
+.motto-leaf-icon {
+  width: 32px !important;
+  height: 32px !important;
+  flex-shrink: 0;
+}
+
+.motto-line {
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  color: #11422b !important;
+  line-height: 1.2 !important;
+}
+
+.motto-swoosh {
+  height: 2px !important;
+  margin-top: 2px !important;
+}
+
+/* Top Super Green Bar (Compact) */
 .super-top-bar {
   background-color: #0b2f1e;
   color: rgba(255, 255, 255, 0.9);
-  padding: 0.45rem 0;
-  font-size: 0.84rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.32rem 0 !important;
+  font-size: 0.78rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .super-top-inner {
@@ -1016,24 +1107,26 @@
 
 .super-top-left {
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
 }
 
 .super-top-right {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .super-top-motto {
-  color: #e2f0d9;
+  color: #dbead2;
   font-weight: 500;
+  font-size: 0.78rem;
 }
 
 .super-top-socials {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .social-icon-link {
@@ -1047,27 +1140,49 @@
   transform: translateY(-1px);
 }
 
-/* Nav Bar Clean Links & Active Underline Indicator matching reference */
+/* ==================== 4. COMPACT & CLEAN NAVIGATION ==================== */
+.sub-nav-bar {
+  background: #faf8f3 !important;
+  border-top: 1px solid rgba(16, 56, 40, 0.06) !important;
+  border-bottom: 1px solid rgba(16, 56, 40, 0.08) !important;
+}
+
+.sub-nav-inner {
+  max-width: 1320px;
+  margin-inline: auto;
+  padding: 0.3rem clamp(1rem, 2.5vw, 2rem) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
 .sub-nav-bar .nav-pill {
   background: transparent !important;
-  color: #172a20 !important;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.4rem 0.8rem;
+  color: #1c3327 !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  padding: 0.32rem 0.62rem !important;
   border-radius: 4px;
   position: relative;
   transition: color 0.2s ease;
+  letter-spacing: 0.005em;
 }
 
 .sub-nav-bar .nav-pill:hover {
-  color: #11422b !important;
+  color: #0b3d25 !important;
   background: transparent !important;
 }
 
 .sub-nav-bar .nav-pill.active,
 .sub-nav-bar .nav-pill.active-green {
-  color: #11422b !important;
-  font-weight: 700;
+  color: #0b3d25 !important;
+  font-weight: 700 !important;
   background: transparent !important;
 }
 
@@ -1075,34 +1190,48 @@
 .sub-nav-bar .nav-pill.active-green::after {
   content: "";
   position: absolute;
-  bottom: -4px;
-  left: 0.75rem;
-  right: 0.75rem;
-  height: 3px;
-  background-color: #1b6840;
+  bottom: -3px !important;
+  left: 0.6rem !important;
+  right: 0.6rem !important;
+  height: 2.5px !important;
+  background-color: #17633c !important;
   border-radius: 2px;
 }
 
+/* Compact, proportional Support Us button */
 .nav-support-orange {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  background-color: #e8590c;
+  gap: 0.35rem !important;
+  background-color: #e8590c !important;
   color: #ffffff !important;
-  padding: 0.55rem 1.35rem;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 0.92rem;
-  box-shadow: 0 4px 14px rgba(232, 89, 12, 0.28);
-  transition: all 0.2s;
+  padding: 0.36rem 0.95rem !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  box-shadow: 0 3px 10px rgba(232, 89, 12, 0.22) !important;
+  transition: all 0.2s ease;
   text-decoration: none;
 }
 .nav-support-orange:hover {
-  background-color: #d14d06;
+  background-color: #d14d06 !important;
   transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(232, 89, 12, 0.3) !important;
 }
 
-/* Hero Section - Text sits directly on natural background, NO artificial white box */
+/* Compact Mobile Toggle */
+.mobile-toggle-btn {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 6px !important;
+}
+.mobile-toggle-btn span {
+  width: 18px !important;
+  height: 2px !important;
+  margin: 2px 0 !important;
+}
+
+/* ==================== 5. BALANCED HERO SECTION ==================== */
 .human-hero-section {
   position: relative;
   background-color: #fbf5e9;
@@ -1110,18 +1239,18 @@
   background-repeat: no-repeat;
   background-position: center right;
   background-size: cover;
-  min-height: clamp(540px, 48vw, 690px);
+  min-height: clamp(420px, 36vw, 520px) !important;
   display: flex;
   align-items: center;
-  padding: clamp(3.5rem, 5.5vw, 5.2rem) 0 clamp(4rem, 6vw, 6rem) 0;
+  padding: clamp(2.2rem, 3.5vw, 3.2rem) 0 clamp(3rem, 4vw, 3.8rem) 0 !important;
   overflow: hidden;
 }
 
 .human-hero-container {
-  max-width: 1400px;
+  max-width: 1360px;
   width: 100%;
   margin-inline: auto;
-  padding-inline: clamp(1.5rem, 4vw, 3.5rem);
+  padding-inline: clamp(1.2rem, 3vw, 2.5rem);
   display: grid;
   grid-template-columns: 1.15fr 0.9fr 0.65fr;
   align-items: center;
@@ -1129,26 +1258,25 @@
   z-index: 2;
 }
 
-/* Left Hero Content */
 .human-hero-left {
-  max-width: 540px;
+  max-width: 520px;
 }
 
 .human-hero-script {
   font-family: 'Caveat', cursive, var(--font-script, cursive);
-  font-size: 1.85rem;
+  font-size: 1.45rem !important;
   font-weight: 700;
   color: #7b4f2c;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem !important;
   letter-spacing: 0.02em;
 }
 
 .human-hero-title {
   font-family: 'Plus Jakarta Sans', var(--font-display, sans-serif);
-  font-size: clamp(2.8rem, 4.4vw, 4.2rem);
-  line-height: 1.08;
+  font-size: clamp(2.1rem, 3.2vw, 2.85rem) !important;
+  line-height: 1.14 !important;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem !important;
   letter-spacing: -0.02em;
 }
 
@@ -1161,60 +1289,60 @@
 }
 
 .human-hero-tagline {
-  font-size: 1.15rem;
-  font-weight: 800;
+  font-size: 1.02rem !important;
+  font-weight: 700;
   color: #172a20;
-  margin-bottom: 0.9rem;
-  line-height: 1.4;
+  margin-bottom: 0.65rem !important;
+  line-height: 1.35;
   letter-spacing: -0.01em;
 }
 
 .human-hero-desc {
-  font-size: 1.02rem;
-  color: #3d4a43;
-  line-height: 1.68;
-  margin-bottom: 1.8rem;
-  max-width: 490px;
+  font-size: 0.92rem !important;
+  color: #3b4841;
+  line-height: 1.62 !important;
+  margin-bottom: 1.35rem !important;
+  max-width: 470px;
 }
 
 .human-hero-buttons {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.85rem !important;
   flex-wrap: wrap;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.1rem !important;
 }
 
 .btn-support-work {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.45rem !important;
   background-color: #e8590c;
   color: #ffffff !important;
   font-weight: 700;
-  font-size: 1rem;
-  padding: 0.82rem 1.8rem;
+  font-size: 0.9rem !important;
+  padding: 0.68rem 1.45rem !important;
   border-radius: 50px;
-  box-shadow: 0 8px 24px rgba(232, 89, 12, 0.28);
+  box-shadow: 0 6px 18px rgba(232, 89, 12, 0.25) !important;
   transition: all 0.25s ease;
   text-decoration: none;
 }
 .btn-support-work:hover {
   background-color: #d14d06;
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(232, 89, 12, 0.38);
+  box-shadow: 0 10px 24px rgba(232, 89, 12, 0.35) !important;
 }
 .btn-heart {
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1rem !important;
 }
 .btn-arrow {
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1rem !important;
   transition: transform 0.2s;
 }
 .btn-support-work:hover .btn-arrow {
-  transform: translateX(4px);
+  transform: translateX(3px);
 }
 
 .btn-learn-more {
@@ -1224,11 +1352,11 @@
   background-color: #ffffff;
   color: #163e2a !important;
   font-weight: 700;
-  font-size: 0.98rem;
-  padding: 0.8rem 1.7rem;
+  font-size: 0.88rem !important;
+  padding: 0.65rem 1.35rem !important;
   border-radius: 50px;
   border: 1.5px solid #163e2a;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
   transition: all 0.25s ease;
   text-decoration: none;
 }
@@ -1327,34 +1455,34 @@
   color: #ffe3a8;
 }
 
-/* ==================== FLOATING PROGRAM CATEGORIES STRIP ==================== */
+/* ==================== FLOATING PROGRAM CATEGORIES STRIP (COMPACT) ==================== */
 .floating-programs-strip {
   position: relative;
   z-index: 10;
-  margin-top: -46px;
-  padding-bottom: 1.5rem;
+  margin-top: -36px;
+  padding-bottom: 1.2rem;
 }
 
 .programs-strip-card {
   background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 16px 45px rgba(17, 66, 43, 0.09), 0 2px 10px rgba(0, 0, 0, 0.04);
-  padding: 1.25rem 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(17, 66, 43, 0.08), 0 2px 8px rgba(0, 0, 0, 0.03);
+  padding: 0.75rem 1.2rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 1.2rem;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  gap: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .strip-item {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.6rem;
   text-decoration: none;
   color: #172a20;
-  padding: 0.6rem 0.5rem;
-  border-radius: 12px;
-  transition: all 0.25s ease;
+  padding: 0.35rem 0.4rem;
+  border-radius: 10px;
+  transition: all 0.2s ease;
 }
 
 .strip-item:hover {
@@ -1363,9 +1491,9 @@
 }
 
 .strip-icon-circle {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1374,12 +1502,12 @@
 }
 
 .strip-item:hover .strip-icon-circle {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .strip-icon-circle svg {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 
 /* Icon Palette matching reference */
@@ -1409,9 +1537,9 @@
 }
 
 .strip-label {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   color: #1c2e24;
 }
 
@@ -1419,7 +1547,7 @@
 .hero-donor-strip {
   background: linear-gradient(90deg, #103828 0%, #174d34 50%, #1e5c3e 100%);
   color: #ffffff;
-  padding: 1.1rem 0;
+  padding: 0.75rem 0;
   border-bottom: 2px solid var(--orange-hero);
   position: relative;
   z-index: 3;
@@ -1429,20 +1557,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .donor-strip-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.4rem;
   background: rgba(255, 255, 255, 0.15);
-  padding: 0.35rem 0.85rem;
+  padding: 0.28rem 0.7rem;
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #ffe0b2;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1451,9 +1579,9 @@
 
 .donor-strip-content {
   flex: 1;
-  min-width: 280px;
-  font-size: 0.94rem;
-  line-height: 1.5;
+  min-width: 260px;
+  font-size: 0.86rem;
+  line-height: 1.45;
   color: rgba(255, 255, 255, 0.92);
 }
 
@@ -1465,15 +1593,15 @@
 .donor-strip-cta {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.65rem;
   flex-wrap: wrap;
 }
 
 .donor-strip-call {
   color: #ffffff;
   font-weight: 700;
-  font-size: 0.88rem;
-  padding: 0.45rem 0.95rem;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.8rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-full);
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -1491,18 +1619,130 @@
   background-color: var(--orange-hero);
   color: #ffffff !important;
   font-weight: 700;
-  font-size: 0.88rem;
-  padding: 0.48rem 1.25rem;
+  font-size: 0.82rem;
+  padding: 0.38rem 1rem;
   border-radius: var(--radius-full);
   transition: all 0.2s;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(232, 86, 24, 0.3);
+  box-shadow: 0 3px 10px rgba(232, 86, 24, 0.25);
   white-space: nowrap;
 }
 
 .donor-strip-btn:hover {
   background-color: var(--orange-hover);
   transform: translateY(-1px);
+}
+
+/* ==================== GLOBAL COMPACT TYPOGRAPHY & SECTIONS ==================== */
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2rem !important;
+}
+
+.section-title {
+  font-size: clamp(1.65rem, 2.5vw, 2.15rem) !important;
+  font-weight: 800 !important;
+  color: var(--green-dark) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 0.5rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+.section-eyebrow {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.section-lead {
+  font-size: 0.94rem !important;
+  color: var(--ink-muted) !important;
+  line-height: 1.62 !important;
+  max-width: 660px !important;
+  margin-inline: auto;
+}
+
+/* Subpage Hero & Content */
+.subpage-hero {
+  padding: clamp(1.8rem, 3.2vw, 2.6rem) 0 !important;
+}
+
+.subpage-title {
+  font-size: clamp(1.65rem, 2.8vw, 2.15rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 0.45rem !important;
+}
+
+.subpage-subtitle {
+  font-size: 0.94rem !important;
+  line-height: 1.55 !important;
+  max-width: 720px !important;
+}
+
+.subpage-breadcrumb {
+  margin-bottom: 0.65rem !important;
+  font-size: 0.82rem !important;
+}
+
+.subpage-content {
+  padding: clamp(2.2rem, 3.8vw, 3.4rem) 0 !important;
+}
+
+/* Activity Cards & Images */
+.activities-section {
+  padding: clamp(2.5rem, 4vw, 3.6rem) 0 !important;
+}
+
+.activities-grid {
+  gap: 1.4rem !important;
+  margin-top: 1.8rem !important;
+}
+
+.activity-card-img-wrap {
+  height: 195px !important;
+}
+
+.activity-card-body {
+  padding: 1.25rem !important;
+}
+
+.activity-card-title {
+  font-size: 1.15rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: 0.45rem !important;
+}
+
+.activity-card-desc {
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+  color: #43544c !important;
+}
+
+/* Footer Refinements */
+.site-footer {
+  padding: 2.8rem 0 1.5rem !important;
+}
+
+.footer-desc {
+  font-size: 0.86rem !important;
+  line-height: 1.58 !important;
+}
+
+.footer-col h4 {
+  font-size: 0.96rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.footer-links a {
+  font-size: 0.85rem !important;
+}
+
+.footer-contact-details p {
+  font-size: 0.85rem !important;
+  line-height: 1.55 !important;
 }
 
 /* Subpage Hero with banner background */
@@ -1513,11 +1753,11 @@
   background-repeat: no-repeat;
 }
 
-/* Responsive */
+/* ==================== RESPONSIVE DESIGN ==================== */
 @media (max-width: 1200px) {
   .programs-strip-card {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 0.85rem;
   }
   .human-hero-container {
     grid-template-columns: 1.2fr 1fr;
@@ -1529,12 +1769,12 @@
 
 @media (max-width: 991px) {
   .human-hero-section {
-    padding: 3rem 0 4rem 0;
+    padding: 2.5rem 0 3.2rem 0 !important;
     background-position: 85% center;
   }
   .human-hero-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.8rem;
   }
   .human-hero-right {
     align-items: flex-start;
@@ -1548,7 +1788,42 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .floating-programs-strip {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-header-inner {
+    padding: 0.4rem 0.85rem !important;
+  }
+  .main-circle-logo {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .brand-titles .gu-name {
+    font-size: 1.1rem !important;
+  }
+  .brand-titles .brand-tagline {
+    font-size: 0.72rem !important;
+  }
+  .brand-motto-badge {
+    display: none !important;
+  }
+  .human-hero-title {
+    font-size: 1.85rem !important;
+    line-height: 1.18 !important;
+  }
+  .human-hero-tagline {
+    font-size: 0.92rem !important;
+  }
+  .human-hero-desc {
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+  }
+  .btn-support-work,
+  .btn-learn-more {
+    padding: 0.6rem 1.25rem !important;
+    font-size: 0.85rem !important;
   }
 }
 
@@ -1558,6 +1833,29 @@
   }
   .super-top-bar {
     display: none;
+  }
+  .brand-header-inner {
+    padding: 0.35rem 0.75rem !important;
+  }
+  .brand-left {
+    gap: 0.6rem !important;
+  }
+  .main-circle-logo {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .brand-titles .gu-name {
+    font-size: 0.98rem !important;
+    letter-spacing: -0.01em !important;
+  }
+  .brand-titles .brand-tagline {
+    display: none !important; /* Keep mobile header ultra compact & prevent wrapping */
+  }
+  .human-hero-title {
+    font-size: 1.65rem !important;
+  }
+  .human-hero-script {
+    font-size: 1.25rem !important;
   }
 }
 

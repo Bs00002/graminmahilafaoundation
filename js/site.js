@@ -276,17 +276,30 @@ document.addEventListener('DOMContentLoaded', () => {
       waText: 'Hello, I would like to know more about Student Education Support at Grameen Mahila Foundation.'
     },
     food: {
-      title: 'Food Support',
-      badge: 'Community Support',
-      img: 'images/placeholder.jpg',
-      desc: 'We provide nutritious meals and essential ration kits to very poor families, elderly villagers, and widows facing hardship.',
+      title: 'Food Support & Nutrition Distribution',
+      badge: 'Care & Relief',
+      img: 'images/food/food-distribution-1.jpg',
+      desc: 'We provide wholesome meals, fresh food packets, and essential ration kits to very poor families, elderly villagers, and children facing hardship in rural communities.',
       points: [
-        'Delivering grains, pulses, and essential groceries to needy families',
-        'Providing timely food assistance with respect and care',
-        'Identifying families in need with help from local community elders',
-        'Photos will be updated here after our upcoming food distribution drive'
+        'Organizing ground food distribution drives for underserved village families',
+        'Distributing freshly prepared, hygienic meals and essential grains',
+        'Ensuring elderly, daily wage earners, and vulnerable children receive nutrition',
+        'Directly documented with authentic ground distribution photographs'
       ],
-      waText: 'Hello, I would like to support the Food Support program at Grameen Mahila Foundation.'
+      waText: 'Hello, I would like to support the Food Distribution drive at Grameen Mahila Foundation.'
+    },
+    awareness: {
+      title: "Women's Awareness Drives",
+      badge: "Women's Empowerment",
+      img: 'images/awareness/women-awareness-1.jpg',
+      desc: "We organize grassroots awareness camps across rural communities to educate women on their legal rights, healthcare, hygiene, child education, and government welfare programs.",
+      points: [
+        'Village-level interactive sessions guiding women on health, nutrition, and self-care',
+        'Guidance on government welfare schemes, banking, and financial empowerment',
+        'Encouraging social confidence, self-reliance, and active community participation',
+        'Documented with real field photographs from our village meetings'
+      ],
+      waText: "Hello, I would like to know more about Women's Awareness Drives at Grameen Mahila Foundation."
     },
     clothes: {
       title: 'Clothes Donation',
