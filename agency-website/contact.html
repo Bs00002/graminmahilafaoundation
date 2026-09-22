@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact Us & Request Proposal | ApexDigital Solutions</title>
+  <meta name="description" content="Get in touch with ApexDigital Solutions. Schedule your free 30-minute technical consultation for custom website development, ERP/CRM software engineering, advanced SEO, or digital marketing automation.">
+  <meta name="keywords" content="contact digital marketing agency, custom software development quote, business website development consultation, hire local SEO experts, ERP software solutions consultation, request proposal custom CRM">
+  
+  <link rel="canonical" href="https://apexdigitalsolutions.com/contact.html">
+  <link rel="stylesheet" href="css/agency.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact ApexDigital Solutions - Custom Software & Growth Agency">
+  <meta property="og:description" content="Speak directly with senior software architects and digital growth specialists. Get your free scoping session and fixed-price proposal.">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ApexDigital Solutions Home">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-text">
+          <span class="brand-name">ApexDigital</span>
+          <span class="brand-sub">Software & Growth Agency</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#estimator">Scope & Cost Estimator</a>
+        <a href="index.html#portfolio">Case Studies</a>
+        <a href="index.html#process">Our Process</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contactFormCard" class="btn btn-primary btn-sm">Request Proposal</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Hero -->
+    <section class="section-sm text-center" style="padding-top: 5rem;">
+      <div class="container" style="max-width: 800px;">
+        <span class="badge-tag cyan">Let's Connect</span>
+        <h1 class="section-title">Start Your Project With <span class="text-gradient">ApexDigital Solutions</span></h1>
+        <p class="section-subtitle">
+          Whether you need a full enterprise ERP overhaul, a high-converting e-commerce web platform, or aggressive search engine dominance, our technical leaders are ready to engineer your growth.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Contact Grid -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="contact-section-wrap" id="contactFormCard">
+          <!-- Left: Direct Channels & Scoping Checklist -->
+          <div class="contact-info-col">
+            <span class="badge-tag">Fast Response</span>
+            <h3>Direct Channels</h3>
+            <p>
+              We respond to all technical inquiries and project briefs within 24 hours Monday through Friday.
+            </p>
+
+            <div style="display: grid; gap: 1.5rem; margin-bottom: 2.5rem;">
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="font-size: 1.5rem;">✉️</div>
+                <div>
+                  <strong style="display: block; color: var(--text-primary); font-size: 1rem;">Official Inquiries Email</strong>
+                  <a href="mailto:contact@apexdigitalsolutions.com" style="color: var(--accent-cyan); font-size: 0.95rem;">contact@apexdigitalsolutions.com</a>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="font-size: 1.5rem;">💬</div>
+                <div>
+                  <strong style="display: block; color: var(--text-primary); font-size: 1rem;">Direct Project Line / WhatsApp</strong>
+                  <span style="color: var(--text-secondary); font-size: 0.95rem;">+1 (800) 555-APEX / +1 (800) 555-2739</span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="font-size: 1.5rem;">⏰</div>
+                <div>
+                  <strong style="display: block; color: var(--text-primary); font-size: 1rem;">Engineering Sprint Hours</strong>
+                  <span style="color: var(--text-secondary); font-size: 0.95rem;">Monday – Friday: 9:00 AM – 7:00 PM EST</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 1.5rem; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+              <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--accent-emerald);">What Happens Next?</h4>
+              <ol style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; padding-left: 1.2rem;">
+                <li>We review your technical requirements and business goals.</li>
+                <li>Our lead architect prepares an initial roadmap and architecture blueprint.</li>
+                <li>We schedule a 30-minute video walkthrough to align on milestones and fixed sprint pricing.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Form -->
+          <div class="contact-form-col">
+            <div id="formAlert" class="form-alert"></div>
+
+            <form id="proposalForm" autocomplete="on">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="clientName">Full Name *</label>
+                  <input type="text" id="clientName" name="clientName" required placeholder="e.g. Sarah Jenkins">
+                </div>
+
+                <div class="form-group">
+                  <label for="clientPhone">Phone / WhatsApp *</label>
+                  <input type="tel" id="clientPhone" name="clientPhone" required placeholder="e.g. +1 555 345 6789">
+                </div>
+
+                <div class="form-group full">
+                  <label for="clientEmail">Business Email *</label>
+                  <input type="email" id="clientEmail" name="clientEmail" required placeholder="e.g. sarah@enterprise.com">
+                </div>
+
+                <div class="form-group full">
+                  <label for="selectedService">Required Solution Category *</label>
+                  <select id="selectedService" name="selectedService" required>
+                    <option value="">Select a category...</option>
+                    <option value="Business Website Development">Business Website & E-Commerce Development</option>
+                    <option value="Custom ERP & CRM Software Development">Custom ERP & CRM Software Solutions</option>
+                    <option value="Advanced SEO, AEO & Local Search">Advanced SEO & AEO Strategies</option>
+                    <option value="AI Marketing & Process Automation">AI Digital Marketing & Process Automation</option>
+                    <option value="Branding & Promotional Video Creation">Branding, Design & Promotional Video</option>
+                    <option value="End-to-End Enterprise Transformation">End-to-End Enterprise Transformation</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
+                  <label for="estimatedBudget">Target Project Budget</label>
+                  <select id="estimatedBudget" name="estimatedBudget">
+                    <option value="Under $5,000">$2,500 – $5,000 (MVP / Starter Web)</option>
+                    <option value="$5,000 - $15,000">$5,000 – $15,000 (Growth Platform)</option>
+                    <option value="$15,000 - $35,000">$15,000 – $35,000 (Custom ERP / CRM System)</option>
+                    <option value="$35,000+">$35,000+ (Multi-Region / Enterprise Scale)</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
+                  <label for="projectDetails">Project Details & Key Objectives *</label>
+                  <textarea id="projectDetails" name="projectDetails" rows="4" required placeholder="Tell us about your current stack, pain points, desired timeline, or growth targets..."></textarea>
+                </div>
+
+                <div class="form-group full">
+                  <button type="submit" class="btn btn-primary btn-block">Submit Project Request ➔</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <div class="brand-logo" style="margin-bottom: 1rem;">
+          <div class="brand-icon">⚡</div>
+          <div class="brand-text">
+            <span class="brand-name">ApexDigital</span>
+            <span class="brand-sub">Software & Growth Agency</span>
+          </div>
+        </div>
+        <p>
+          Bespoke digital solutions designed to grow your business online. Specializing in high-performance web development, custom ERP solutions, CRM systems, advanced SEO strategies, and smart marketing automation.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#estimator">Scope Estimator</a></li>
+          <li><a href="index.html#portfolio">Case Studies</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#services">Web Development</a></li>
+          <li><a href="index.html#services">Custom ERP Systems</a></li>
+          <li><a href="index.html#services">CRM Development</a></li>
+          <li><a href="index.html#services">Advanced SEO</a></li>
+          <li><a href="index.html#services">AI Marketing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:contact@apexdigitalsolutions.com">contact@apexdigitalsolutions.com</a></li>
+          <li>+1 (800) 555-APEX</li>
+          <li>Mon – Fri (9am - 7pm EST)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 ApexDigital Solutions. All rights reserved.</span>
+      <span>Bespoke Engineering • Scalable Systems • Compounding Growth</span>
+    </div>
+  </footer>
+
+  <script src="js/agency.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
-# Grameen Mahila Foundation (Official Website)
+# Gramin Mahila Foundation (Official Website)
 
-Official website for **Grameen Mahila Foundation**, dedicated to rural women's empowerment, vocational skills training (sewing, fabric painting), student education support, tree plantation, and disaster relief in Sanand, Ahmedabad District, Gujarat, India.
+Official website for **Gramin Mahila Foundation**, dedicated to rural women's empowerment, vocational skills training (sewing, fabric painting), student education support, tree plantation, and disaster relief in Sanand, Ahmedabad District, Gujarat, India.
 
 ---
 
@@ -31,6 +31,6 @@ Official website for **Grameen Mahila Foundation**, dedicated to rural women's e
 ## 📞 Contact Information
 
 - **Phone**: +91 97230 03786
-- **Email**: info@grameenmahila.org
-- **Location**: Sanand, Ahmedabad District, Gujarat, India
+- **Email**: GraminMahilaFoundation@gmail.com
+- **Location / Office Address**: Tekra Vado Vas, Kharakuva, Near Juni Panchayat Office, Sanand - Kadi Road, Village: Nidhrad, Taluka: Sanand, District: Ahmedabad, Gujarat, India – 382115
 - **Motto**: *Strong Women • Caring Society • Brighter Tomorrow*

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grameenmahilafoundation.org/sitemap.xml
+Sitemap: https://graminmahilafoundation.org/sitemap.xml

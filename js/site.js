@@ -1,5 +1,5 @@
 /**
- * GRAMEEN MAHILA FOUNDATION
+ * GRAMIN MAHILA FOUNDATION
  * Interactive Scripts (Simple English)
  */
 
@@ -9,19 +9,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainNav = document.querySelector('.nav-links-wrapper, .main-nav');
 
   if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', () => {
+    const closeMenu = () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      mainNav.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    };
+
+    const openMenu = () => {
+      menuToggle.setAttribute('aria-expanded', 'true');
+      mainNav.classList.add('open');
+      document.body.classList.add('menu-open');
+    };
+
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', String(!isExpanded));
-      mainNav.classList.toggle('open', !isExpanded);
+      if (isExpanded) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
-    // Close menu when a link is clicked
+    // Close menu when any nav link is clicked
     mainNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        menuToggle.setAttribute('aria-expanded', 'false');
-        mainNav.classList.remove('open');
+        closeMenu();
       });
     });
+
+    // Close menu when tapping outside
+    document.addEventListener('click', (e) => {
+      if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+    });
+
+    // Reset menu on resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 860) {
+        closeMenu();
+      }
+    }, { passive: true });
   }
 
   // 2. Active Link Highlighting on Scroll
@@ -60,9 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const filterValue = btn.dataset.filter;
 
         galleryItems.forEach(item => {
-          const category = item.dataset.category;
-          if (filterValue === 'all' || category === filterValue) {
-            item.style.display = 'block';
+          const category = item.dataset.category || '';
+          const cats = category.split(/\s+/);
+          if (filterValue === 'all' || cats.includes(filterValue) || category === filterValue) {
+            item.style.display = '';
           } else {
             item.style.display = 'none';
           }
@@ -80,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxNext = document.querySelector('.lightbox-next');
 
   let currentGalleryIndex = 0;
-  const getVisibleGalleryItems = () => Array.from(document.querySelectorAll('.gallery-item')).filter(el => el.style.display !== 'none');
+  const getVisibleGalleryItems = () => Array.from(document.querySelectorAll('.gallery-item:not(.gallery-item-video)')).filter(el => el.style.display !== 'none');
 
   const openLightbox = (index) => {
     const visible = getVisibleGalleryItems();
@@ -88,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentGalleryIndex = index;
     const item = visible[index];
     const img = item.querySelector('img');
+    if (!img) return;
     const title = item.querySelector('.gallery-overlay strong')?.textContent || '';
     const desc = item.querySelector('.gallery-overlay span')?.textContent || '';
 
@@ -106,7 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
+      if (item.classList.contains('gallery-item-video') || e.target.closest('video')) return;
       const visible = getVisibleGalleryItems();
       const index = visible.indexOf(item);
       if (index !== -1) openLightbox(index);
@@ -234,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Build practical tailoring skills to earn an income from home',
         'Friendly support and guidance from experienced instructors'
       ],
-      waText: 'Hello, I would like more information about Sewing Training at Grameen Mahila Foundation.'
+      waText: 'Hello, I would like more information about Sewing Training at Gramin Mahila Foundation.'
     },
     painting: {
       title: 'Painting Training',
@@ -247,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Opportunities to create handmade items and earn an income',
         'An encouraging space for village women to learn together'
       ],
-      waText: 'Hello, I would like more information about Painting Training at Grameen Mahila Foundation.'
+      waText: 'Hello, I would like more information about Painting Training at Gramin Mahila Foundation.'
     },
     selfdefense: {
       title: 'Self-Defence Training',
@@ -260,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Encouraging physical fitness and mental strength for girls',
         'Conducted through dedicated community camps in rural schools'
       ],
-      waText: 'Hello, I would like more information about Self-Defence Training at Grameen Mahila Foundation.'
+      waText: 'Hello, I would like more information about Self-Defence Training at Gramin Mahila Foundation.'
     },
     education: {
       title: 'Student Education Support',
@@ -273,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Promoting education for village girls and helping them stay enrolled',
         'Learning sessions with positive values and encouragement'
       ],
-      waText: 'Hello, I would like to know more about Student Education Support at Grameen Mahila Foundation.'
+      waText: 'Hello, I would like to know more about Student Education Support at Gramin Mahila Foundation.'
     },
     food: {
       title: 'Food Support & Nutrition Distribution',
@@ -286,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Ensuring elderly, daily wage earners, and vulnerable children receive nutrition',
         'Directly documented with authentic ground distribution photographs'
       ],
-      waText: 'Hello, I would like to support the Food Distribution drive at Grameen Mahila Foundation.'
+      waText: 'Hello, I would like to support the Food Distribution drive at Gramin Mahila Foundation.'
     },
     awareness: {
       title: "Women's Awareness Drives",
@@ -299,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Encouraging social confidence, self-reliance, and active community participation',
         'Documented with real field photographs from our village meetings'
       ],
-      waText: "Hello, I would like to know more about Women's Awareness Drives at Grameen Mahila Foundation."
+      waText: "Hello, I would like to know more about Women's Awareness Drives at Gramin Mahila Foundation."
     },
     clothes: {
       title: 'Clothes Donation',
@@ -312,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Bringing comfort and warmth to village elders and children',
         'Photos will be updated here after our next clothing distribution'
       ],
-      waText: 'Hello, I would like to support the Clothes Donation drive at Grameen Mahila Foundation.'
+      waText: 'Hello, I would like to support the Clothes Donation drive at Gramin Mahila Foundation.'
     },
     trees: {
       title: 'Tree Plantation',
@@ -325,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Creating greener, healthier village surroundings for everyone',
         'Community volunteer drives to encourage environmental care'
       ],
-      waText: 'Hello, I would like to join or support the Tree Plantation drive at Grameen Mahila Foundation.'
+      waText: 'Hello, I would like to join or support the Tree Plantation drive at Gramin Mahila Foundation.'
     },
     disaster: {
       title: 'Disaster Relief',
@@ -338,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Basic support to help vulnerable households get back on their feet',
         'Field updates and real photos from our active relief efforts'
       ],
-      waText: 'Hello, I would like information about Disaster Relief at Grameen Mahila Foundation.'
+      waText: 'Hello, I would like information about Disaster Relief at Gramin Mahila Foundation.'
     },
     women: {
       title: "Women's Training",
@@ -351,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Guidance on household savings, banking, and government schemes',
         'Encouraging women to participate actively in community life'
       ],
-      waText: "Hello, I would like information about Women's Training at Grameen Mahila Foundation."
+      waText: "Hello, I would like information about Women's Training at Gramin Mahila Foundation."
     },
     children: {
       title: "Children's Support",
@@ -364,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Promoting girls education and regular school attendance',
         'Community activities that teach positive values and teamwork'
       ],
-      waText: "Hello, I would like to support Children's Support programs at Grameen Mahila Foundation."
+      waText: "Hello, I would like to support Children's Support programs at Gramin Mahila Foundation."
     },
     community: {
       title: 'Community Support',
@@ -377,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Promoting village harmony, health, and mutual assistance',
         'Grassroots volunteer drives led by local community members'
       ],
-      waText: 'Hello, I would like to support Community Support initiatives at Grameen Mahila Foundation.'
+      waText: 'Hello, I would like to support Community Support initiatives at Gramin Mahila Foundation.'
     }
   };
 
