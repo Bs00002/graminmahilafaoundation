@@ -1085,6 +1085,19 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-muted);
 }
 
+.footer-bottom a {
+  color: var(--accent-cyan);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom a:hover {
+  color: #ffffff;
+}
+
+
 /* Responsive Breakpoints */
 @media (max-width: 1024px) {
   .metrics-strip {

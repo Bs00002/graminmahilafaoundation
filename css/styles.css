@@ -1700,6 +1700,20 @@ footer.site-footer {
   color: #92b5a2;
 }
 
+.footer-bottom a {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-bottom a:hover {
+  color: #f6c042;
+  opacity: 0.9;
+}
+
+
 /* ==================== 15. RESPONSIVE BREAKPOINTS ==================== */
 @media (max-width: 1200px) {
   .exact-hero-inner {
@@ -1836,5 +1850,10 @@ footer.site-footer {
     padding: 0.85rem;
     bottom: 18px;
     right: 18px;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+    gap: 0.75rem;
   }
 }
