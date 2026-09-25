@@ -31,6 +31,6 @@ Official website for **Gramin Mahila Foundation**, dedicated to rural women's em
 ## 📞 Contact Information
 
 - **Phone**: +91 97230 03786
-- **Email**: GraminMahilaFoundation@gmail.com
+- **Email**: graminmahilafoundation@gmail.com
 - **Location / Office Address**: Tekra Vado Vas, Kharakuva, Near Juni Panchayat Office, Sanand - Kadi Road, Village: Nidhrad, Taluka: Sanand, District: Ahmedabad, Gujarat, India – 382115
 - **Motto**: *Strong Women • Caring Society • Brighter Tomorrow*
